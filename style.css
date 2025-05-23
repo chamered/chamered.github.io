@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tiny5&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: "Tiny5", sans-serif;
+    background-color: #2E2E2E;
+}
+
+.bg-light-dark {
+    background-color: #2E2E2E;
+}
+
+.bg-dark-dark {
+    background-color: #1D1D1D;
+}
+
+.bg-grey {
+    background-color: #333333;
+}
+
+.bg-orange {
+    background-color: #f7c002;
+}
+
+.bg-purple {
+    background-color: #702cf3;
+}
+
+.bg-yellow {
+    background-color: #efd81e;
+}
+
+.bg-green {
+    background-color: #33f32c;
+}
+
+.bg-git {
+    background-color: #e94a23;
+}
+
+.bg-node {
+    background-color: #7dc727;
+}
+
+.bg-react {
+    background-color: #61dafb;
+}
+
+.text-green {
+    color: #33f32c;
+}
+
+.text-yellow {
+    color: #efd81e;
+}
+
+.text-purple {
+    color: #702cf3;
+}
+
+.text-orange {
+    color: #f7c002;
+}
+
+.text-git {
+    color: #e94a23;
+}
+
+.text-node {
+    color: #7dc727;
+}
+
+.text-react {
+    color: #61dafb;
+}
+
+.border-custom {
+    border: 4px solid #f7c002;
+}
+
+.btn-grey {
+    background-color: #555555;
+}
+
+.btn-grey:hover {
+    border: 1px solid white;
+}
+
+.btn-orange {
+    background-color: #f7c002;
+}
+
+.btn-orange:hover {
+    background-color: #b08a02;
+    color: white;
+}
+
+.form-control:focus {
+    background-color: #555555;
+    box-shadow: none;
+}
+
+.square {
+    width: 70px;
+    height: 70px;
+}
+
+.card {
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
