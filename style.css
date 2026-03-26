@@ -1,118 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tiny5&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-html {
-    scroll-behavior: smooth;
+body.custom-bg {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-body {
-    scroll-behavior: smooth;
-    font-family: "Montserrat", sans-serif;
-    background-color: #2E2E2E;
+.construction-card {
+    border-top: 6px solid #0d6efd;
+    max-width: 600px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.bg-light-dark {
-    background-color: #2E2E2E;
+.construction-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.15)!important;
 }
 
-.bg-dark-dark {
-    background-color: #1D1D1D;
+.floating-icon {
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
 }
 
-.bg-grey {
-    background-color: #333333;
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
 }
 
-.bg-orange {
-    background-color: #f7c002;
+.custom-btn {
+    border-radius: 50rem; /* Pill shape */
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
-.bg-purple {
-    background-color: #702cf3;
-}
-
-.bg-yellow {
-    background-color: #efd81e;
-}
-
-.bg-green {
-    background-color: #33f32c;
-}
-
-.bg-git {
-    background-color: #e94a23;
-}
-
-.bg-node {
-    background-color: #7dc727;
-}
-
-.bg-react {
-    background-color: #61dafb;
-}
-
-.text-green {
-    color: #33f32c;
-}
-
-.text-yellow {
-    color: #efd81e;
-}
-
-.text-purple {
-    color: #702cf3;
-}
-
-.text-orange {
-    color: #f7c002;
-}
-
-.text-git {
-    color: #e94a23;
-}
-
-.text-node {
-    color: #7dc727;
-}
-
-.text-react {
-    color: #61dafb;
-}
-
-.border-custom {
-    border: 4px solid #f7c002;
-}
-
-.btn-grey {
-    background-color: #555555;
-}
-
-.btn-grey:hover {
-    border: 1px solid white;
-}
-
-.btn-orange {
-    background-color: #f7c002;
-}
-
-.btn-orange:hover {
-    background-color: #b08a02;
-    color: white;
-}
-
-.form-control:focus {
-    background-color: #555555;
-    box-shadow: none;
-}
-
-.square {
-    width: 70px;
-    height: 70px;
-}
-
-.card {
-    transition: all 0.3s;
-}
-
-.card:hover {
+.custom-btn:hover {
     transform: scale(1.05);
 }
