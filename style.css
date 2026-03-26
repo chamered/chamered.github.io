@@ -1,21 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
-body.custom-bg {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
-
-.construction-card {
-    border-top: 6px solid #0d6efd;
-    max-width: 600px;
-    width: 100%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.construction-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 1rem 3rem rgba(0,0,0,.15)!important;
-}
 
 .floating-icon {
     display: inline-block;
@@ -29,10 +11,6 @@ body.custom-bg {
 }
 
 .custom-btn {
-    border-radius: 50rem; /* Pill shape */
-    padding-left: 2rem;
-    padding-right: 2rem;
-    font-weight: 600;
     transition: all 0.3s ease;
 }
 

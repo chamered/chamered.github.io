@@ -8,21 +8,31 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body class="custom-bg">
-        <div class="container d-flex flex-column justify-content-center align-items-center min-vh-100 text-center px-4">
-            <div class="construction-card p-4 p-md-5 shadow-lg rounded-4 bg-white">
-                <i class="bi bi-cone-striped display-2 display-md-1 text-primary mb-3 mb-md-4 floating-icon"></i>
-                <h1 class="display-5 fw-bold mb-3 text-dark">Under Construction</h1>
-                <p class="lead text-secondary mb-4 mb-md-5">I'm currently working on my personal portfolio. <br class="d-none d-md-inline"> It will be here soon!</p>
-                
-                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                    <a href="https://github.com/chamered" target="_blank" class="btn btn-outline-dark btn-lg custom-btn d-flex align-items-center justify-content-center gap-2">
-                        <i class="bi bi-github"></i> GitHub
-                    </a>
-                    <a href="mailto:samu.malta05@gmail.com" class="btn btn-primary btn-lg custom-btn d-flex align-items-center justify-content-center gap-2">
-                        <i class="bi bi-envelope-fill"></i> Get in Touch
-                    </a>
-                </div>
+    <body class="bg-light">
+        <div class="container d-flex flex-column justify-content-center align-items-center min-vh-100 text-center">
+            <div class="card border-0 rounded-4 shadow py-4 px-5">
+                    <i class="bi-cone-striped display-3 text-primary floating-icon mt-1"></i>
+                    <h1 class="fw-bold m-0">Under Construction</h1>
+                    <p class="text-secondary m-0">I'm currently working on my personal portfolio. <br class="d-none d-md-inline"> It will be here soon!</p>
+                    
+                    <div class="my-4 mx-auto w-100" style="max-width: 200px;">
+                        <div class="d-flex justify-content-between fw-light">
+                            <p class="text-secondary m-0"><em>Current Progress</em></p>
+                            <p class="text-secondary m-0"><em>10%</em></p>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center gap-2 mt-2">
+                        <a href="https://github.com/chamered" target="_blank" class="btn btn-outline-dark rounded-pill custom-btn d-flex align-items-center justify-content-center gap-2">
+                            <i class="bi bi-github"></i> GitHub
+                        </a>
+                        <a href="mailto:samu.malta05@gmail.com" class="btn btn-primary rounded-pill custom-btn d-flex align-items-center justify-content-center gap-2">
+                            <i class="bi bi-envelope-fill"></i> Get in Touch
+                        </a>
+                    </div>
             </div>
         </div>
     </body>
