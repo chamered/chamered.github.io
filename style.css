@@ -1,13 +1,33 @@
-
-.floating-icon {
-    display: inline-block;
-    animation: float 3s ease-in-out infinite;
+html {
+    scroll-behavior: smooth;
 }
 
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+.hero {
+    min-height: 50vh;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1) !important;
+}
+
+.project-img {
+    height: 180px;
+    object-fit: cover;
+}
+
+.tech-badge {
+    background-color: #e9ecef;
+    color: #495057;
+    font-weight: 500;
+    padding: 0.35em 0.65em;
 }
 
 .custom-btn {
@@ -16,4 +36,14 @@
 
 .custom-btn:hover {
     transform: scale(1.05);
+}
+
+@media (max-width: 575.98px) {
+    .hero {
+        min-height: 60vh;
+    }
+
+    .project-img {
+        height: 160px;
+    }
 }
