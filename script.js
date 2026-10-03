@@ -33,76 +33,27 @@ function renderProjects() {
   const container = document.getElementById("project-container");
 
   container.innerHTML = projects.map(p => `
-    <div class="project-row">
-      <div class="project-top">
-        <span class="project-title">${p.title}</span>
-        <span class="project-links">
-          ${p.code ? `<a href="${p.code}" target="_blank"><i class="bi bi-github"></i> Code</a>` : ""}
-          ${p.demo ? `<a href="${p.demo}" target="_blank"><i class="bi bi-box-arrow-up-right"></i> Demo</a>` : ""}
-        </span>
-      </div>
-      <p class="project-desc">${p.description}</p>
-      <div class="project-tags">
-        ${p.tags.map(t => `<span class="tag">${t}</span>`).join("")}
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+            <h3 class="card-title h5 mb-0">
+              <a class="link-primary text-decoration-none link-underline-opacity-0 link-underline-opacity-100-hover"
+                href="${p.code}" target="_blank">${p.title}</a>
+            </h3>
+            <span class="d-flex flex-shrink-0 gap-1">
+              ${p.code ? `<a class="btn btn-sm btn-outline-dark" href="${p.code}" target="_blank" aria-label="${p.title} code"><i class="bi bi-github"></i></a>` : ""}
+              ${p.demo ? `<a class="btn btn-sm btn-outline-dark" href="${p.demo}" target="_blank" aria-label="${p.title} demo"><i class="bi bi-box-arrow-up-right"></i></a>` : ""}
+            </span>
+          </div>
+          <p class="card-text text-secondary flex-grow-1">${p.description}</p>
+          <div class="d-flex flex-wrap gap-1">
+            ${p.tags.map(t => `<span class="badge bg-light text-secondary">${t}</span>`).join("")}
+          </div>
+        </div>
       </div>
     </div>
   `).join("");
 }
 
-// ── Scroll fade-in ──
-
-function initScrollAnimations() {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
-
-  document.querySelectorAll(".fade-in:not(.hero .fade-in)").forEach((el) => {
-    observer.observe(el);
-  });
-}
-
-// ── Navbar scroll effect ──
-
-function initNavbar() {
-  const navbar = document.getElementById("navbar");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 40) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
-  });
-}
-
-// ── Mobile menu ──
-
-function initMobileMenu() {
-  const toggler = document.getElementById("nav-toggler");
-  const menu = document.getElementById("mobile-menu");
-  const close = document.getElementById("mobile-close");
-
-  toggler.addEventListener("click", () => menu.classList.add("open"));
-  close.addEventListener("click", () => menu.classList.remove("open"));
-
-  menu.querySelectorAll(".mobile-link").forEach((link) => {
-    link.addEventListener("click", () => menu.classList.remove("open"));
-  });
-}
-
-// ── Init ──
-
-document.addEventListener("DOMContentLoaded", () => {
-  renderProjects();
-  initScrollAnimations();
-  initNavbar();
-  initMobileMenu();
-});
+renderProjects();
