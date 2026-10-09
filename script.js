@@ -34,7 +34,7 @@ function renderProjects() {
 
   container.innerHTML = projects.map(p => `
     <div class="col">
-      <div class="card h-100 shadow-sm">
+      <div class="card h-100 border-0 shadow">
         <div class="card-body d-flex flex-column">
           <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
             <h3 class="card-title h5 mb-0">
